@@ -1,0 +1,34 @@
+<ImageComposition xsi:noNamespaceSchemaLocation="https://www.skraper.net/ImageComposition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Information ShortName="OnionOS 3-Image-Mix (Small wheel)" LongName="OnionOS 3-Image-Mix (Small wheel)" Description="Screenshot + 3DBox + Wheel" Author="dashqa" />
+  <Viewport Color="#00FFFFFF" Width="250" Height="360" />
+  <Drawings>
+    <Item Type="Screenshot">
+      <Display X="50%" Y="0%" Antialiasing="Medium" Width="100%" Height="100%" KeepRatio="true" Anchor="TopHCenter" />
+      <Fallback Type="ScreenshotTitle">
+        <Fallback Type="SystemWallPaper">
+          <Children Reference="Parent">
+            <Item Type="Text" Text="No Screenshot!" TextColor="#FFFFFFFF" FontFamilly="Arial" FontStyle="Bold Italic" />
+          </Children>
+        </Fallback>
+      </Fallback>
+    </Item>
+    <Item Type="Box3D" IfOrientation="IsPortrait">
+      <Display X="0.5%" Y="100%" Antialiasing="High" Width="60%" Height="60%" KeepRatio="true" Anchor="BottomLeft" />
+       <Fallback Type="SystemPhoto">
+        <Display X="0.5%" Y="100%" Antialiasing="High" Width="100%" Height="50%" KeepRatio="true" Anchor="BottomLeft" />
+      </Fallback>
+    </Item>
+    <Item Type="Box3D" IfOrientation="IsLandscape">
+      <Display X="0.5%" Y="95%" Antialiasing="High" Width="95%" Height="50%" KeepRatio="true" Anchor="BottomLeft" />
+       <Fallback Type="SystemPhoto">
+        <Display X="0.5%" Y="100%" Antialiasing="High" Width="100%" Height="50%" KeepRatio="true" Anchor="BottomLeft" />
+      </Fallback>
+    </Item>
+    <Item Type="Wheel">
+      <Display X="100%" Y="95%" Width="50%" Anchor="BottomRight" KeepRatio="true" Antialiasing="High" IfSystem="IsNotInTheList:2"/>
+      <Fallback Type="SystemWheel">
+        <Display X="100%" Y="85%" Width="70%" Anchor="BottomRight" KeepRatio="true" Antialiasing="High" IfSystem="IsNotInTheList:2"/>
+      </Fallback>
+    </Item>
+  </Drawings>
+</ImageComposition>
